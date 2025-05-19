@@ -88,17 +88,17 @@ ifeq ($(PLATFORM),PLATFORM_DRM)
     endif
 endif
 
-ifeq ($(PLATFORM),PLATFORM_WEB)
-    ifneq ($(PLATFORM_OS),LINUX)
-        # Emscripten required variables
-        EMSDK_PATH         ?= C:/raylib/emsdk
-        EMSCRIPTEN_PATH    ?= $(EMSDK_PATH)/upstream/emscripten
-        CLANG_PATH          = $(EMSDK_PATH)/upstream/bin
-        PYTHON_PATH         = $(EMSDK_PATH)/python/3.9.2-nuget_64bit
-        NODE_PATH           = $(EMSDK_PATH)/node/20.18.0_64bit/bin
-        export PATH         = $(EMSDK_PATH);$(EMSCRIPTEN_PATH);$(CLANG_PATH);$(NODE_PATH);$(PYTHON_PATH):$$(PATH)
-    endif
-endif
+# ifeq ($(PLATFORM),PLATFORM_WEB)
+#     ifneq ($(PLATFORM_OS),LINUX)
+#         # Emscripten required variables
+#         EMSDK_PATH         ?= C:/raylib/emsdk
+#         EMSCRIPTEN_PATH    ?= $(EMSDK_PATH)/upstream/emscripten
+#         CLANG_PATH          = $(EMSDK_PATH)/upstream/bin
+#         PYTHON_PATH         = $(EMSDK_PATH)/python/3.9.2-nuget_64bit
+#         NODE_PATH           = $(EMSDK_PATH)/node/20.18.0_64bit/bin
+#         export PATH         = $(EMSDK_PATH);$(EMSCRIPTEN_PATH);$(CLANG_PATH);$(NODE_PATH);$(PYTHON_PATH):$$(PATH)
+#     endif
+# endif
 
 # Define default C compiler: CC
 #------------------------------------------------------------------------------------------------
