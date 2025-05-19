@@ -321,7 +321,7 @@ int main(int argc, char *argv[])
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);  // Window configuration flags
     InitWindow(screenWidth, screenHeight, TextFormat("%s v%s | %s", toolName, toolVersion, toolDescription));
-    SetWindowMinSize(1280, 720);
+    // SetWindowMinSize(1280, 720);
     SetExitKey(0);
 
     // Code font generation for embedding
